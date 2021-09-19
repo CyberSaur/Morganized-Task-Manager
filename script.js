@@ -44,10 +44,26 @@ function newTask(task_param, completed_param) {
     task_lst.appendChild(task_unit);
     task_unit.addEventListener("dblclick", toggleTaskStatus);
 }
-
-
-
-
+function toggleTaskStatus() {
+    if (this.classList.contains("completed")) {
+        this.classList.remove("completed");
+    } else {
+        this.classList.add("completed");
+    }
+}
+function eraseCompletedTasks() {
+    var completed_tasks = task_lst.getElementsByClassName("completed");
+    
+    while (completed_tasks.length > 0) {
+        completed_tasks.item(0).remove();
+    }
+}
+function deleteList() {
+    var tasks = task_lst.children;
+    while (tasks.length > 0) {
+        tasks.item(0).remove();
+    }
+}
 
 
 
