@@ -83,7 +83,7 @@ function loadTaskList() {
         
         for(var i = 0; i < task_arr.length; i++) {
             var task = task_arr[i];
-            new_task(task.toDo, task.completed);
+            newTask(task.toDo, task.completed);
         }
     }
 }
